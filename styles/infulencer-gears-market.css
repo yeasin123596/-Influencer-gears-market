@@ -133,7 +133,38 @@ header {
   top: 20px;
 }
 
+/* company logo section */
 
+.company-wrapper {
+  position: relative;
+  margin-top: 69px;
+}
+
+.company-wrapper::before,
+.company-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #dcdcdc, transparent);
+}
+
+.company-wrapper::before {
+  top: 0;
+}
+
+.company-wrapper::after {
+  bottom: 0;
+}
+
+.company-logo {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 61px;
+  padding: 43px 62px;
+}
 
 
 /* Responsive media query (for  mobile devices-- below 576px ) */
@@ -186,6 +217,23 @@ header {
     top: 30px;
   }
 
+  /* company logo */
+
+  .company-logo img {
+    width: 63px;
+    height: 48px;
+  }
+
+  .company-logo {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+  }
+
+  .company-logo img:last-child {
+    grid-column: span 3;
+    margin: 0 auto;
+  }
+
 }
 
 
@@ -202,6 +250,11 @@ header {
 
   .hero {
     flex-direction: column-reverse;
+  }
+
+  /* company logo section */
+  .company-logo {
+    grid-template-columns: repeat(4, 1fr);
   }
 
 }
