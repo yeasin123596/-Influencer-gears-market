@@ -299,6 +299,46 @@ header, main {
   filter: invert(26%) sepia(61%) saturate(3487%) hue-rotate(322deg) brightness(92%) contrast(91%);
 }
 
+/* footer section */
+
+footer {
+  background: rgba(10, 8, 38, 1);
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.company .company-title {
+  color: rgba(255, 255, 255, 1);
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.company .company-details {
+  color: rgba(217, 219, 225, 1);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.company .social-media {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 50px;
+}
+
+.company .social-media img {
+  width: 24px;
+  /* filter: invert(1); */
+  filter: invert(26%) sepia(61%) saturate(3487%) hue-rotate(322deg) brightness(92%) contrast(91%);
+}
 
 
 /* Responsive media query (for  mobile devices-- below 576px ) */
