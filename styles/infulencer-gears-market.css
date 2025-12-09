@@ -20,7 +20,7 @@ html {
 }
 
 /* nav bar section */
-header {
+header, main {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -90,7 +90,7 @@ header {
   margin-bottom: 30px;
 }
 
-.hero .hero-details button {
+.hero .hero-details .btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,6 +166,84 @@ header {
   padding: 43px 62px;
 }
 
+/* products section */
+
+.container-title {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  color: rgba(58, 58, 58, 1);
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 76px;
+}
+
+.product-container .product-card {
+  max-width: 330px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  padding: 17px 15px;
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.product-card .card-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.product-card .price {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.product-card .card-description {
+  max-width: 175px;
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgba(120, 120, 133, 1);
+}
+
+.product .more {
+  padding-right: 76px;
+  display: flex;
+  justify-content: right;
+  margin-top: 50px;
+}
+
+.product .more a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: rgba(224, 44, 109, 0.87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.product .more a img {
+  width: 24px;
+  filter: invert(26%) sepia(61%) saturate(3487%) hue-rotate(322deg) brightness(92%) contrast(91%);
+}
+
+.product .more a:hover {
+  border-bottom: 1px solid rgba(224, 44, 109, 0.87);
+}
 
 /* Responsive media query (for  mobile devices-- below 576px ) */
 @media screen and (max-width: 576px) {
@@ -234,6 +312,19 @@ header {
     margin: 0 auto;
   }
 
+  /* products */
+
+  .product-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 ;
+    justify-items: center;
+  }
+
+  .product .more {
+    padding: 0;
+    justify-content: center;
+  }
+
 }
 
 
@@ -255,6 +346,17 @@ header {
   /* company logo section */
   .company-logo {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* products */
+
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #card-9 {
+    grid-column: span 2;
+    margin: 0 auto;
   }
 
 }
